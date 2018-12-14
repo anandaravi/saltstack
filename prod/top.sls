@@ -1,0 +1,3 @@
+prod:
+  'saletminionnone':
+    - dev

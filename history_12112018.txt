@@ -1,0 +1,477 @@
+    1  apt get update
+    2  get update
+    3  sudo get update
+    4  sudo getupdate
+    5  sudo apt getupdate
+    6  apt getupdate
+    7  apt getu pdate
+    8  sudo apt update
+    9  sudo apt upgrade
+   10  ls -lrt
+   11  hostnamectl set-hostname saltmaster
+   12  exec bash
+   13  ifconfig
+   14  ping saltminion1
+   15  vi /etc/hosts
+   16  ping saltminion1
+   17  ping saltminion2
+   18  wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+   19  deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main
+   20  vi /etc/apt/sources.list.d/saltstack.list
+   21  apt-get-update
+   22  apt-get update
+   23  apt-get install salt-master
+   24  service salt-master status
+   25  salt-key -
+   26  L
+   27  salt-key -L
+   28  salt-key -a saltminion1
+   29  salt-key -L
+   30  cd /etc/salt
+   31  ll
+   32  cd pki
+   33  ll
+   34  cd master
+   35  ll
+   36  cd minions
+   37  ll
+   38  cd ..
+   39  ll
+   40  salt-key -L
+   41  ls 0lrt
+   42  ll
+   43  salt-key --help
+   44  salt-key -L
+   45  salt-key -d saltminion1
+   46  salt-key -L
+   47  salt-key -a saltminion1
+   48  salt-key -L
+   49  salt '*' test.ping
+   50  ll
+   51  salt * test.ping
+   52  salt '*' test.ping
+   53  salt-key -L
+   54  salt-key -a saltminionnone
+   55  salt-key -L
+   56  salt '*' test.ping
+   57  ll
+   58  ls -lrt
+   59  vi autosign.conf
+   60  ll
+   61  salt-key -L
+   62  service salt-master restart
+   63  salt-key -L
+   64  service salt-master restart
+   65  salt-key -L
+   66  ll
+   67  cat autosign.conf 
+   68  cd minions_autosign/
+   69  cd ..
+   70  ls -lrt
+   71  cd ,,'cd 
+   72  cd ..
+   73  cd ..
+   74  ls -lrt
+   75  vi master
+   76  salt-key -L
+   77  salt-key -D
+   78  vi master
+   79  service salt-master restart
+   80  salt-key -L
+   81  ls -lrt
+   82  vi autosign.conf
+   83  service salt-master restart
+   84  salt-key -L
+   85  ll
+   86  vi master
+   87  salt-key -D
+   88  salt-key -L
+   89  cd /var/cache/
+   90  ll
+   91  cd salt/
+   92  ll
+   93  cd master/
+   94  ll
+   95  cd minions/
+   96  ll
+   97  cd saltminion
+   98  ll
+   99  cd saltminion2
+  100  ll
+  101  cat data.p 
+  102  ll
+  103  salt saleminion2 grains.ls
+  104  salt-key
+  105  salt saltminion2 grains.ls
+  106  salt saltminion2 grains.items
+  107  salt saltminion2 grains.ls
+  108  salt saltminion2 grains.id
+  109  salt saltminion2 grains.items.id
+  110  salt-key -F master
+  111  cd ~
+  112  ls -lrt
+  113  salt saltminion1 file.mkdir '/root/demodir'
+  114  salt saltminionnone file.mkdir '/root/demodir'
+  115  salt saltminionnone file.touch '/root/demodir/file.txt'
+  116  salt saltminionnone user.add aramasa 
+  117  salt saltminionnone user.groupadd sudo aramasa
+  118  salt saltminionnone group.add sudo aramasa
+  119  salt saltminionnone group.add aramasa sudo
+  120  salt saltminionnone group.add aramasa sudoers
+  121  salt saltminionnone group.add aramasa sudo
+  122  salt saltminionnone group.add sudo aramasa
+  123  salt saltminionnone group.add aramasa sudo
+  124  salt saltminionnone group.adduser sudo aramasa
+  125  salt saltminionnone cron.set_job aramasa '5' '*' '*' '*' 1 echo 'Good boy'>> /tmp/job.txt
+  126  crontab /?
+  127  crontab 
+  128  crontab --help
+  129  crontab -l
+  130  crontab -e
+  131  salt saltminionnone cron.set_job aramasa '5' '*' '*' '*' '*' echo 'Good boy'>> /tmp/job.txt
+  132  salt saltminionnone cron.set_job aramasa '5 * * * *  echo Good boy>> /tmp/job.txt'
+  133  salt saltminionnone cron.set_job aramasa 1 * * * * 'echo Hello >>/tmp/job.txt'
+  134  curl
+  135  salt saltminionnone pkg.install curl
+  136  curl
+  137  history
+  138  salt-key
+  139  salt '*' test.ping
+  140  salt saltminionnone cron.set_job aramasa * * * * * /tmp/job.sh
+  141  salt saltminionnone sys.list_modules
+  142  salt saltminionnone sys.list_functions cron
+  143  salt saltminionnone sys.doc cron.set_job
+  144  salt saltminionnone sys.list_functions cmd
+  145  salt saltminionnone sys.doc cmd.run_all
+  146  salt saltminionnone sys.doc cmd.run_all | more
+  147  salt cmd.run_all 'echo '\''h=\"baz\"'\''' runas=root
+  148  salt saltminionnone sys.doc cmd.run_all | more
+  149  salt '*' cmd.run_all 'echo '\''h=\"baz\"'\''' runas=root
+  150  salt '*' cmd.run_all `hostname` runas=root
+  151  salt '*' cmd.run_all 'cd /root/ | mkdir test | cd test | tocuh testfile.txt' runas=root
+  152  salt '*' cmd.run_all 'cd /root/ | mkdir test | cd test/ | tocuh testfile.txt' runas=root
+  153  ls -lrt
+  154  salt saltminionnone sys.doc cmd.cp
+  155  salt saltminionnone sys.doc cp
+  156  salt saltminionnone sys.doc cp | more
+  157  ls -lrt
+  158  vi ttt.txt
+  159  salt saltminionnone 
+  160  salt saltminionnone sys.doc cp.list_functions
+  161  salt saltminionnone sys.cp.list_functions
+  162  salt saltminionnone sys.cp.list_function
+  163  salt saltminionnone sys.list_function cp
+  164  salt saltminionnone sys.list_functions cp
+  165  salt saltminionnone sys.doc cp.push
+  166  salt saltminionnone cp.push ttt.txt
+  167  salt saltminionnone cp.push ./ttt.txt
+  168  ll
+  169  salt saltminionnone cp.push ./ttt.txt upload_path='/tmp/'
+  170  pwd
+  171  salt saltminionnone cp.push /root/ttt.txt upload_path='/tmp/'
+  172  pwd
+  173  cd /var/
+  174  ll
+  175  cd run
+  176  ll
+  177  cd salt
+  178  ll
+  179  cd master/
+  180  ll
+  181  cd ~
+  182  salt saltminionnone grains.items
+  183  salt saltminionnone grains.get os
+  184  salt saltminionnone grains.get uname
+  185  salt saltminionnone grains.get version
+  186  salt saltminionnone grains.get name
+  187  salt saltminionnone grains.get fqdn
+  188  salt saltminionnone grains.set ravi GOOD
+  189  salt saltminionnone grains.get ravi
+  190  salt sys.doc grains.get
+  191  salt sys.list_functions grains
+  192  salt -G 'ravi:GOOD' test.ping
+  193  salt -G 'ravi:GOOD1' test.ping
+  194  salt -G 'ravi:GOOD' test.ping
+  195  salt saltminionnone grains.get fqdn
+  196  salt -G 'servertype:database' test.ping
+  197  salt -G 'servertype: database' test.ping
+  198  salt saltminionnone grain.items
+  199  salt saltminionnone grains.items
+  200  salt saltminionnone test.pring
+  201  salt saltminionnone test.ping
+  202  ifconfig
+  203  salt saltminionnone test.ping
+  204  salt saltminionnone grains.items
+  205  cd /etc/salt
+  206  ll
+  207  vi master
+  208  service salt-master restart
+  209  service salt-master status
+  210  ls -lrt
+  211  cd ~
+  212  ls -lrt
+  213  pwd
+  214  salt saltminionnone file.copy /root/ttt.txt /root/demodir
+  215  ll
+  216  pwd
+  217  salt saltminionnone file.copy salt://root/ttt.txt /root/demodir
+  218  salt saltminionnone file.copy salt://ttt.txt /root/demodir
+  219  salt saltminionnone file.copy salt:///root/ttt.txt /root/demodir
+  220  salt saltminionnone file.copy /root/ttt.txt /root/demodir
+  221  salt saltminionnone file.copy /root/demodir/ttt.txt /root/ttt.txt
+  222  pwd
+  223  cd /etc/salt
+  224  ls -lrt
+  225  vi transfer.sls
+  226  salt saltminionnone state.sls transfer
+  227  cat transfer.sls
+  228  vi transfer.sls
+  229  salt saltminionnone state.sls transfer
+  230  vi transfer.sls
+  231  ls -lrt /root
+  232  cd /srv/salt
+  233  cd /srv
+  234  cd salt
+  235  ls -lrt
+  236  mkdir salt
+  237  cd salt
+  238  cp /etc/salt/*.sls
+  239  ls -lrt /etc/salt
+  240  cp /etc/salt/*.sls ./
+  241  ls -lrt
+  242  salt saltminionnone state.sls transfer
+  243  ls -lrt
+  244  cp /etc/salt/*.txt ./
+  245  cp /root/*.txt ./
+  246  salt saltminionnone state.sls transfer
+  247  cd /etc/salt
+  248  vi master
+  249  exit
+  250  ifconfig
+  251  ping saltminion2
+  252  restart
+  253  restart --help
+  254  restart --no-wait
+  255  shutdown -r
+  256  shutdown --help
+  257  shutdown -r --no-wait
+  258  shutdown -r --reboot
+  259  date
+  260  ifconfig
+  261  dhclient -v
+  262  ifconfig
+  263  dhclient -v
+  264  ifconfig
+  265  salt '*' test.ping
+  266  cd /etc
+  267  vi hosts
+  268  salt '*' test.ping
+  269  salt -C 'G@servertype: database' test.ping
+  270  salt -C 'G@servertype:database' test.ping
+  271  salt -C 'G@servertype:databasei or G@o:Ubuntu' test.ping
+  272  salt -C 'G@servertype:databasei or G@os:Ubuntu' test.ping
+  273  salt saltminionnone grains.items
+  274  salt -C 'G@servertype:database and G@os:Ubuntu' test.ping
+  275  salt -C 'G@servertype:database or G@os:Ubuntu' test.ping
+  276  salt -C 'G@servertype:database1 and G@os:Ubuntu' test.ping
+  277  cd /srv/salt
+  278  ls -lrt
+  279  vi top.sls 
+  280  salt '*' state.apply
+  281  vi top.sls 
+  282  salt '*' state.apply
+  283  vi top.sls 
+  284  salt saltminionnone grains.items | fqdn
+  285  salt saltminionnone grains.items | grep fqdn
+  286  salt saltminionnone grains.items 
+  287  salt '*' state.apply
+  288  vi top.sls 
+  289  ls -lrt
+  290  vi one.sls
+  291  salt '*' state.apply
+  292  salt '*' stats.highvalue
+  293  salt '*' stats.highstate
+  294  salt '*' stats.apply
+  295  salt '*' stat.apply
+  296  salt '*' state.apply
+  297  vi one.sls 
+  298  salt '*' state.apply
+  299  vi one.sls
+  300  salt '*' state.apply
+  301  vi top.sls
+  302  salt '*' state.apply
+  303  vi one.sls
+  304  salt '*' state.apply
+  305  ls -l rt
+  306  ls -lrt
+  307  mkdir webserver
+  308  cd webserver/
+  309  ls -lrt
+  310  vi installapache.sls
+  311  salt saltminionnone state.sls installapache.sls test=True
+  312  salt saltminionnone state.sls installapache test=True
+  313  salt saltminionnone state.sls installapache
+  314  vi installapache.sls
+  315  ls -lrt
+  316  cd ..
+  317  ls
+  318  vi deploytomcat.sls 
+  319  cd webserver/
+  320  vi installapache.sls
+  321  salt saltminionnone state.sls installapache test=True
+  322  vi installapache.sls
+  323  salt saltminionnone state.sls installapache
+  324  cat ../deploytomcat.sls 
+  325  vi installapache.sls
+  326  salt saltminionnone state.sls installapache
+  327  vi installapache.sls
+  328  vi init.sls
+  329  vi installapache.sls
+  330  vi serviceapache.sls
+  331  vi apachehomepage.sls
+  332  salt saltminionnone state.sls installapache
+  333  vi installapache.sls
+  334  salt saltminionnone state.sls webserver.installapache
+  335  ls -lrt
+  336  salt saltminionnone state.sls webserver.serviceapache
+  337  vi init.sls
+  338  ls -lrt
+  339  vi apachehomepage.sls
+  340  salt saltminionnone state.sls webserver.apachehomepage
+  341  vi homepage.html
+  342  salt saltminionnone state.sls webserver.apachehomepage
+  343  cd ..
+  344  vi top.sls 
+  345  salt saltminionnone state.apply 
+  346  vi top.sls 
+  347  cd webserver/
+  348  cat init.sls
+  349  cd ..
+  350  salt saltminionnone state.apply 
+  351  vi top.sls 
+  352  salt saltminionnone state.apply 
+  353  cd webserver/
+  354  ls
+  355  vi init.sls 
+  356  cd ..
+  357  salt saltminionnone state.apply
+  358  cd webserver/
+  359  ls -lrt
+  360  vi homepage.html 
+  361  ls -lrt
+  362  mv homepage.html homepage.html.jinga
+  363  ls -lrt
+  364  vi apachehomepage.sls 
+  365  salt saltminionnone state.apply
+  366  cd ..
+  367  salt saltminionnone state.apply
+  368  cd webserver/
+  369  ls -lrt
+  370  mv homepage.html.jinga homepage.html.jinja
+  371  cd ..
+  372  salt saltminionnone state.apply
+  373  ls -lrt
+  374  vi batchfilecreate.sls
+  375  ls -lrt webserver/
+  376  cp webserver/apachehomepage.sls ../batchfile.sls
+  377  ls -lrt
+  378  cd webserver/
+  379  ls
+  380  ll
+  381  cp apachehomepage.sls ../batchfile.sls
+  382  cd ..
+  383  ls -lrt
+  384  vi batchfile.sls 
+  385  vi ubuntu.sh.jinja
+  386  ls -lrt
+  387  salt '*' state.sls batchfile
+  388  salt '*' grains.items
+  389  vi ubuntu.sh.jinja 
+  390  salt '*' state.sls batchfile
+  391  cat webserver/apachehomepage.sls 
+  392  cat webserver/homepage.html.jinja 
+  393  vi ubuntu.sh.jinja 
+  394  salt '*' state.sls batchfile
+  395  vi createmultiuserjinja.sls
+  396  salt saltminion1 state.sls createmultiuserjinja
+  397  salt saltminionnone state.sls createmultiuserjinja
+  398  history
+  399  history> history_12112018.txt
+  400  vi batchfile.sls 
+  401  salt '*' state.sls batchfile
+  402  vi batchfile.sls 
+  403  salt '*' state.sls batchfile
+  404  cd /srv
+  405  cd salt
+  406  ls -lrt
+  407  cd /etc/salt
+  408  ls -lrt
+  409  vi master
+  410  ls -lrta
+  411  del .master.swp
+  412  rm .master.swp
+  413  vi master
+  414  service salt-master restart
+  415  service salt-master status
+  416  cd ..
+  417  ls -lrt
+  418  mkdir dev
+  419  mkdir prod
+  420  ls -lrt
+  421  cd salt
+  422  ls -lrt
+  423  mkdir dev
+  424  mkdir prod
+  425  cd ..
+  426  ll
+  427  rmdir dev
+  428  rmdir prod
+  429  cd salt
+  430  ll
+  431  rmdir dev
+  432  rmdir prod
+  433  ll
+  434  vi master
+  435  service salt-master restart
+  436  cd /srv/salt
+  437  mkdir dev
+  438  mkdir prod
+  439  cat three.sls
+  440  cat two.sls
+  441  cp two.sls base.sls
+  442  vi base.sls 
+  443  cp base.sls dev
+  444  cp base.sls prod
+  445  cd dev
+  446  vi dev.sls
+  447  mv base.sls dev.sls
+  448  vi dev.sls
+  449  cd ..
+  450  cd prod
+  451  mv base.sls prod.sls
+  452  vi prod.sls 
+  453  ls -lrt
+  454  cd ..
+  455  vi top.sls 
+  456  salt '*' state.highstate
+  457  vi top.sls
+  458  salt '*' state.highstate
+  459  vi master
+  460  cd /etc/salt
+  461  vi master
+  462  cd prod
+  463  cd /srv/salt/prod
+  464  vi top.sls
+  465  salt '*' state.highstate
+  466  ls -lrt
+  467  salt '*' test.ping
+  468  cd ..
+  469  mkdir _grains
+  470  ll
+  471  cd _grains/
+  472  vi customgrain.py
+  473  cd ..
+  474  salt 'saltminionnone' saltutil.sync_all
+  475  salt 'saltminionnone' grains.items| grep newcustom
+  476  salt 'saltminionnone' grains.items
+  477  history> history_12112018.txt
